@@ -23,7 +23,7 @@ import kotlin.concurrent.thread
 //import unicauca.movil.peliculas.util.Data
 
 
-class MainFragment : Fragment() {
+class MainFragmentFav : Fragment() {
 
     val adapter: PeliculaAdapter = PeliculaAdapter(this::movieSelected)
     val adapterp: PaqueteAdapter = PaqueteAdapter()
@@ -40,15 +40,15 @@ class MainFragment : Fragment() {
         list.adapter = adapter
         list.layoutManager = LinearLayoutManager(activity)
         //con datos quemados
-        adapter.datap = Data2.paquetes
+        //adapter.datap = Data2.paquetes
 
-        //thread{
-            ////con datos de SQLite
-            //adapter.datap = dao.all()
-            ////runOnUiThread {
-            ////    finish()
-            ////}
+        thread{
+        //con datos de SQLite
+        adapter.datap = dao.all()
+        //runOnUiThread {
+        //    finish()
         //}
+        }
     }
 
     fun movieSelected(pos:Int){
@@ -59,7 +59,7 @@ class MainFragment : Fragment() {
     }
 
     companion object {
-        fun instance():MainFragment = MainFragment()
+        fun instance():MainFragmentFav = MainFragmentFav()
     }
 
 }

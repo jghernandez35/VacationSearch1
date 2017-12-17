@@ -24,6 +24,7 @@ import unicauca.movil.peliculas.adapters.PaqueteAdapter
 import unicauca.movil.peliculas.db.AppDB
 import unicauca.movil.peliculas.db.PaqueteDao
 import unicauca.movil.peliculas.fragments.MainFragment
+import unicauca.movil.peliculas.fragments.MainFragmentFav
 import unicauca.movil.peliculas.models.Paquetes
 import unicauca.movil.peliculas.models.Pelicula
 import unicauca.movil.peliculas.net.AppClient
@@ -98,7 +99,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener, Callback<
                 //    startActivity(intent)
                     finish()
             }
-            R.id.nav_favoritos -> putFragment(R.id.container, MainFragment.instance())
+            R.id.nav_favoritos -> putFragment(R.id.container, MainFragmentFav.instance())
         }
         return true
     }
