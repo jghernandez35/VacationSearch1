@@ -14,8 +14,11 @@ import org.jetbrains.anko.support.v4.startActivity
 import unicauca.movil.peliculas.R
 import unicauca.movil.peliculas.adapters.PaqueteAdapter
 import unicauca.movil.peliculas.adapters.PeliculaAdapter
+import unicauca.movil.peliculas.db.AppDB
+import unicauca.movil.peliculas.db.PaqueteDao
 import unicauca.movil.peliculas.util.Data
 import unicauca.movil.peliculas.util.Data2
+import kotlin.concurrent.thread
 
 //import unicauca.movil.peliculas.util.Data
 
@@ -24,6 +27,8 @@ class MainFragment : Fragment() {
 
     val adapter: PeliculaAdapter = PeliculaAdapter(this::movieSelected)
     val adapterp: PaqueteAdapter = PaqueteAdapter()
+    //manejo de Base de Datos
+    val dao: PaqueteDao = AppDB.db.paqueteDao()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -34,7 +39,16 @@ class MainFragment : Fragment() {
         super.onResume()
         list.adapter = adapter
         list.layoutManager = LinearLayoutManager(activity)
+        //con datos quemados
         adapter.datap = Data2.paquetes
+        
+        //thread{
+            ////con datos de SQLite
+            //adapter.datap = dao.all()
+            ////runOnUiThread {
+            ////    finish()
+            ////}
+        //}
     }
 
     fun movieSelected(pos:Int){

@@ -7,7 +7,7 @@
     <string name="pass">Password</string>
     <string name="description">Descripcion</string>
     <string name="comedy">Comedia</string>
-    <string name="action">Varios</string>
+    <string name="action">Favoritos</string>
     <string name="horror">Terror</string>
     <string name="drama">Drama</string>
     <string name="fantasy">Fantasia</string>

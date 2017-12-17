@@ -98,6 +98,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener, Callback<
                 //    startActivity(intent)
                     finish()
             }
+            R.id.nav_favoritos -> putFragment(R.id.container, MainFragment.instance())
         }
         return true
     }
