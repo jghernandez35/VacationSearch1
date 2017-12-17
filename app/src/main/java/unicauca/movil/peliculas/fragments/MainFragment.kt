@@ -22,7 +22,7 @@ import unicauca.movil.peliculas.util.Data2
 
 class MainFragment : Fragment() {
 
-    //val adapter: PeliculaAdapter = PeliculaAdapter(this::movieSelected)
+    val adapter: PeliculaAdapter = PeliculaAdapter(this::movieSelected)
     val adapterp: PaqueteAdapter = PaqueteAdapter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -32,11 +32,9 @@ class MainFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        list.adapter = adapterp
+        list.adapter = adapter
         list.layoutManager = LinearLayoutManager(activity)
-        //adapter.data = Data.peliculas
-        //adapterp.datap = adapterp.datap
-        adapterp.datap = Data2.paquetes
+        adapter.datap = Data2.paquetes
     }
 
     fun movieSelected(pos:Int){

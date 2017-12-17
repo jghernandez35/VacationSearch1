@@ -14,14 +14,15 @@ import android.support.v7.graphics.Palette
 import android.view.Window
 import android.view.WindowManager
 import com.squareup.picasso.Picasso
-//import com.squareup.picasso.Callback
-//import com.squareup.picasso.Picasso
+import com.squareup.picasso.Callback
 import kotlinx.android.synthetic.main.activity_detail.*
 import unicauca.movil.peliculas.databinding.ActivityDetailBinding
 
 import unicauca.movil.peliculas.adapters.PaqueteAdapter
+import unicauca.movil.peliculas.adapters.PeliculaAdapter
+import unicauca.movil.peliculas.util.Data2
 
-class DetailActivity : AppCompatActivity(){
+class DetailActivity : AppCompatActivity(), Callback {
 
     lateinit var binding:ActivityDetailBinding
 
@@ -32,20 +33,17 @@ class DetailActivity : AppCompatActivity(){
         setSupportActionBar(toolbar)
 
         val pos = intent.extras.getInt("pos", 0)
-        //val pelicula = Data.peliculas[pos]
-        val paquete = PaqueteAdapter().datap[pos]
+        val paquete = Data2.paquetes[pos]
 
-        //binding.pelicula = pelicula
         binding.paquete = paquete
 
         collapsing.title = paquete.nombre
         Picasso.with(this)
                 .load(Uri.parse(paquete.imagen))
-                //.into(img, this)
-
+                .into(img, this)
     }
 
-    fun onSuccess() {
+    override fun onSuccess() {
         val drawable = img.drawable as BitmapDrawable
         val palette = Palette.from(drawable.bitmap).generate()
         val default = ContextCompat.getColor(this, R.color.colorPrimary)
@@ -71,5 +69,5 @@ class DetailActivity : AppCompatActivity(){
         return Color.rgb(red, green, blue)
     }
 
-    fun onError() {}
+    override fun onError() {}
 }

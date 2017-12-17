@@ -10,7 +10,7 @@ import unicauca.movil.peliculas.models.Paquetes
 import unicauca.movil.peliculas.models.Pelicula
 import unicauca.movil.peliculas.util.inflate
 
-class PeliculaAdapter(val callback:(pos:Int)->Unit) : RecyclerView.Adapter<PeliculaViewHolder>() {
+class PeliculaAdapter(val callback:(pos:Int)->Unit) : RecyclerView.Adapter<PaqueteViewHolder>() {
 
     var datap: List<Paquetes> = emptyList()
         set(value) {
@@ -18,22 +18,22 @@ class PeliculaAdapter(val callback:(pos:Int)->Unit) : RecyclerView.Adapter<Pelic
             notifyDataSetChanged()
         }
 
-    override fun onBindViewHolder(holder: PeliculaViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PaqueteViewHolder, position: Int) {
         holder.binding.paquete = datap[position]
         holder.binding.root.tag = position
         holder.binding.handler = this
     }
 
-    fun onMovieClick(pos:Int){
+    fun onPaqueteClick(pos:Int){
         callback(pos)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PeliculaViewHolder
-            = PeliculaViewHolder(parent.inflate(R.layout.template_pelicula))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
+            :PaqueteViewHolder = PaqueteViewHolder(parent.inflate(R.layout.template_pelicula))
 
     override fun getItemCount(): Int = datap.size
 }
 
-class PeliculaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class PaqueteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val binding: TemplatePeliculaBinding = DataBindingUtil.bind(view)
 }

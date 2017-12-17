@@ -113,11 +113,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener, Callback<
         return super.onOptionsItemSelected(item)
     }
 
-
-
-
-
-
+//--------------------------------------------------------------------------------------------------
     override fun onDrawerStateChanged(newState: Int) {
         toggle.onDrawerStateChanged(newState)
     }
