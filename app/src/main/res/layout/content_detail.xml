@@ -78,7 +78,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/iconDate"
                     tools:text="Precio"
-                    android:text="@{paquete.nombre}"
+                    android:text="@{paquete.precio}"
                     />
             </android.support.constraint.ConstraintLayout>
 

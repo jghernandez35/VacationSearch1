@@ -5,20 +5,20 @@ import unicauca.movil.peliculas.models.Paquetes
 object Data2 {
 
     var paquetes: MutableList<Paquetes> = mutableListOf(
-            Paquetes("Parque del Cafe",120000,"http://portalesdelcafe.com/wp-content/uploads/2016/08/parcafe.jpg","1. Transporte terrestre Cali – Silvia – Cali\n" +
+            Paquetes("Parque del Cafe","120000","http://portalesdelcafe.com/wp-content/uploads/2016/08/parcafe.jpg","1. Transporte terrestre Cali – Silvia – Cali\n" +
                     "2. Alojamiento la noche del día uno (sábado – lunes o miércoles) en la Casa Turística de Silvia con base en acomodación Doble – Triple o Cuádruple (2–3 o 4) personas por habitación.\n" +
                     "3. Toda la alimentación (tres comidas diarias) desde el refrigerio de bienvenida hasta el almuerzo del día dos (domingo – martes o jueves) .\n" +
                     "4. Noche musical de integración (si hay hospedados en la casa más de 15 quince personas).\n" +
                     "5. Guía de turismo desde Cali, si el grupo de turistas es superior a veinte personas.\n" +
                     "6. Visita a la casa museo con las mejores artesanías de Colombia y el mundo."),
-            Paquetes("Silvia Cauca",190000,"https://media-cdn.tripadvisor.com/media/photo-s/0f/10/39/7b/silvia-cauca-pueblo-de.jpg","1. Transporte terrestre Cali – Silvia – Cali\n" +
+            Paquetes("Silvia Cauca","190000","https://media-cdn.tripadvisor.com/media/photo-s/0f/10/39/7b/silvia-cauca-pueblo-de.jpg","1. Transporte terrestre Cali – Silvia – Cali\n" +
                     "2. Alojamiento la noche del día uno (sábado – lunes o miércoles) en la Casa Turística de Silvia con base en acomodación Doble – Triple o Cuádruple (2–3 o 4) personas por habitación.\n" +
                     "3. Toda la alimentación (tres comidas diarias) desde el refrigerio de bienvenida hasta el almuerzo del día dos (domingo – martes o jueves) .\n" +
                     "4. Noche musical de integración (si hay hospedados en la casa más de 15 quince personas).\n" +
                     "5. Guía de turismo desde Cali, si el grupo de turistas es superior a veinte personas.\n" +
                     "6. Visita a la casa museo con las mejores artesanías de Colombia y el mundo."),
             Paquetes("LLANOS ORIENTALES",
-                    650000,
+                    "650000",
                     "https://viajesvillanuevaltda.com/wp-content/uploads/2015/05/llanos-orientales-viajes-villanueva1.png",
                     "1. Alojamiento por tres noches cuatro días en el HOTEL CAMPESTRE CAMPANARIO 5 ESTRELLAS con base en acomodación doble o triple.\n" +
                             "2. Alimentación claramente descrita en el programa.\n" +
@@ -33,7 +33,7 @@ object Data2 {
                             "11. Citytour en chiva con demostración de joropo.\n" +
                             "12.Tarjeta de asistencia médica"),
             Paquetes("BOYACÁ ESPECIAL ILUMINACIONES",
-                    490000,
+                    "490000",
                     "https://cuponassets.cuponatic-latam.com/backendCo/uploads/imagenes_descuentos/111850/e7a5a7d7cb1c62763b24130ba3c5635ad41de530.XL2.jpg",
                     "• Alojamiento por 2 noches en Paipa con base en acomodación doble o triple.\n" +
                             "• Alimentación claramente descrita en el programa.\n" +
@@ -45,7 +45,7 @@ object Data2 {
                             "• Atención especial para quienes celebren su cumpleaños o aniversario dentro de la excursión.\n" +
                             "• Guía acompañante especializada desde Bogotá durante todo el recorrido."),
             Paquetes("VALLECAUCANIDAD",
-                    95000,
+                    "95000",
                     "http://cumbreap2017.cancilleria.gov.co/sites/default/files/inline-images/ErmitaBulevarCalil78FinalA.jpg",
                     "1. Transporte terrestre para realizar el itinerario de este programa.\n" +
                             "2. Tiquete de ingreso a la Hacienda El Paraíso.\n" +

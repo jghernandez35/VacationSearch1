@@ -6,14 +6,14 @@ import android.arch.persistence.room.PrimaryKey
 
 @Entity
 data class Paquetes(var nombre: String,
-                    var precio: Int,
+                    var precio: String,
                     var imagen: String,
                     var descripcion: String){
     @PrimaryKey(autoGenerate = true)
     var id: Long? = null
 
     @Ignore
-    constructor():this("",0,"","")
+    constructor():this("","0","","")
 }
 
 
