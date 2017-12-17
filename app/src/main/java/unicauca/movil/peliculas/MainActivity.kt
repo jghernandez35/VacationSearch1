@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,6 +18,7 @@ import org.jetbrains.anko.startActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import unicauca.movil.peliculas.R.id.message
 import unicauca.movil.peliculas.adapters.PeliculaAdapter
 import unicauca.movil.peliculas.adapters.PaqueteAdapter
 import unicauca.movil.peliculas.db.AppDB
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener, Callback<
 
     //private val adapter: PeliculaAdapter = PeliculaAdapter()
     private val adapterp: PaqueteAdapter = PaqueteAdapter()
+    //manejo de Base de Datos
     val dao:PaqueteDao = AppDB.db.paqueteDao()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,10 +53,9 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener, Callback<
         nav.setNavigationItemSelectedListener { setContent(it) }
 
         putFragment(R.id.container, MainFragment.instance())
-
     }
 
-    //fun test(pos:Int){}
+
 
     override fun onResume() {
         super.onResume()

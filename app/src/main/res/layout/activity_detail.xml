@@ -9,6 +9,9 @@
         <variable
             name="paquete"
             type="unicauca.movil.peliculas.models.Paquetes"/>
+        <variable
+            name="handler"
+            type="unicauca.movil.peliculas.DetailActivity"/>
     </data>
 
     <android.support.design.widget.CoordinatorLayout
@@ -66,6 +69,7 @@
             app:layout_anchorGravity="bottom|right"
             android:layout_margin="@dimen/small"
             app:srcCompat="@drawable/ic_favorite"
+            android:onClick="@{()-> handler.save()}"
             />
 
     </android.support.design.widget.CoordinatorLayout>

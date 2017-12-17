@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.graphics.Palette
+import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import com.squareup.picasso.Picasso
@@ -20,15 +21,22 @@ import unicauca.movil.peliculas.databinding.ActivityDetailBinding
 
 import unicauca.movil.peliculas.adapters.PaqueteAdapter
 import unicauca.movil.peliculas.adapters.PeliculaAdapter
+import unicauca.movil.peliculas.db.AppDB
+import unicauca.movil.peliculas.db.PaqueteDao
+import unicauca.movil.peliculas.models.Paquetes
 import unicauca.movil.peliculas.util.Data2
+import kotlin.concurrent.thread
 
 class DetailActivity : AppCompatActivity(), Callback {
 
     lateinit var binding:ActivityDetailBinding
+    //manejo de Base de Datos
+    val dao: PaqueteDao = AppDB.db.paqueteDao()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail)
+        binding.handler = this
 
         setSupportActionBar(toolbar)
 
@@ -41,6 +49,20 @@ class DetailActivity : AppCompatActivity(), Callback {
         Picasso.with(this)
                 .load(Uri.parse(paquete.imagen))
                 .into(img, this)
+    }
+
+    fun save(){
+        Log.d("jose", "INICIO En metodo Save() de MainActivity ----------------------------------**-----------");
+
+        val paquete = Paquetes("prueba","123","no foto","sin descripcion")
+
+        thread{
+            dao.insert(paquete)
+            runOnUiThread {
+                finish()
+            }
+        }
+        Log.d("jose", "FIN En metodo Save() de MainActivity ----------------------------------**-----------");
     }
 
     override fun onSuccess() {

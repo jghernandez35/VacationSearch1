@@ -15,6 +15,9 @@ interface PaqueteDao{
     @Delete
     fun delete(pelicula:Paquetes)
 
+    @Query("SELECT * FROM paquetes WHERE id = :id")
+    fun paqueteById(id:Long):Paquetes
+
     @Query("SELECT * FROM paquetes")
     fun all():List<Paquetes>
 }
