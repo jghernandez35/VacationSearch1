@@ -6,6 +6,7 @@
     >
 
     <data>
+        <import type="android.view.View" />
         <variable
             name="paquete"
             type="unicauca.movil.peliculas.models.Paquetes"/>

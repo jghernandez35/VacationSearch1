@@ -83,15 +83,14 @@
 
                 <TextView
                     android:id="@+id/date"
-                    android:layout_width="0dp"
+                    android:layout_width="341dp"
                     android:layout_height="19dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginStart="8dp"
                     android:text="@{paquete.nombre}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:visibility="@{ paquete.nombre == null ? View.GONE : View.VISIBLE}"
                     app:layout_constraintBottom_toBottomOf="@+id/iconDate"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/iconDate"
                     tools:text="Fecha salida" />
 

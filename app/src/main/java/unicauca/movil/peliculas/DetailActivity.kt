@@ -54,13 +54,19 @@ class DetailActivity : AppCompatActivity(), Callback {
     fun save(){
         Log.d("jose", "INICIO En metodo Save() de MainActivity ----------------------------------**-----------");
 
-        val paquete = Paquetes("prueba","123","no foto","sin descripcion")
+        val pos = intent.extras.getInt("pos", 0)
+        val paqueteFav = Data2.paquetes[pos]
+
+        Log.d("jose", "pos: "+pos+"INICIO En metodo Save() de MainActivity ----------------------------------**-----------");
+
+        //val paquete = Paquetes("prueba","123","no foto","sin descripcion")
+        //val paquete = Paquetes("prueba","123","no foto","sin descripcion")
 
         thread{
-            dao.insert(paquete)
-            runOnUiThread {
-                finish()
-            }
+            dao.insert(paqueteFav)
+            //runOnUiThread {
+            //    finish()
+            //}
         }
         Log.d("jose", "FIN En metodo Save() de MainActivity ----------------------------------**-----------");
     }
