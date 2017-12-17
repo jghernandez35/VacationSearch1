@@ -5,13 +5,40 @@ import unicauca.movil.peliculas.models.Paquetes
 object Data2 {
 
     var paquetes: MutableList<Paquetes> = mutableListOf(
-            Paquetes("Parque del Cafe","120000","http://portalesdelcafe.com/wp-content/uploads/2016/08/parcafe.jpg","1. Transporte terrestre Cali – Silvia – Cali\n" +
-                    "2. Alojamiento la noche del día uno (sábado – lunes o miércoles) en la Casa Turística de Silvia con base en acomodación Doble – Triple o Cuádruple (2–3 o 4) personas por habitación.\n" +
-                    "3. Toda la alimentación (tres comidas diarias) desde el refrigerio de bienvenida hasta el almuerzo del día dos (domingo – martes o jueves) .\n" +
-                    "4. Noche musical de integración (si hay hospedados en la casa más de 15 quince personas).\n" +
-                    "5. Guía de turismo desde Cali, si el grupo de turistas es superior a veinte personas.\n" +
-                    "6. Visita a la casa museo con las mejores artesanías de Colombia y el mundo."),
-            Paquetes("Silvia Cauca","190000","https://media-cdn.tripadvisor.com/media/photo-s/0f/10/39/7b/silvia-cauca-pueblo-de.jpg","1. Transporte terrestre Cali – Silvia – Cali\n" +
+            Paquetes("Parque del Cafe",
+                    "120000",
+                    "http://portalesdelcafe.com/wp-content/uploads/2016/08/parcafe.jpg",
+                    "1. Alojamiento por cuatro noches cinco días en acomodación doble o triple en los Hoteles previstos:\n" +
+                            "\n" +
+                            "* Miércoles: Guadalajara de Buga y/o Hostal del Regidor.\n" +
+                            "* Jueves y viernes: hotel Tocurinca del Quindío (una hermosa finca-hotel) y/o el Hostal de la Vega.\n" +
+                            "* Sábado, Dann Cali y/o Torre de Cali.\n" +
+                            "\n" +
+                            "2. Alimentación descrita en el programa: DOS COMIDAS DIARIAS (desayunos, almuerzos o cenas), durante la excursión\n" +
+                            "\n" +
+                            "3. Transporte para realizar el itinerario descrito en la programación\n" +
+                            "\n" +
+                            "4. Tiquete de ingreso a:\n" +
+                            "\n" +
+                            "* Parque Nacional del Café\n" +
+                            "* Parque Nacional de la Cultura Agropecuaria PANACA con ingreso al Mundo del Caballo que es espectacular y demás atracciones del parque\n" +
+                            "* Zoológico de Cali\n" +
+                            "* Hacienda El Paraíso\n" +
+                            "* Museo de la Caña de Azúcar\n" +
+                            "\n" +
+                            "5. Guía acompañante desde que los turistas llegan a la ciudad de Cali\n" +
+                            "\n" +
+                            "6. Rifas durante el recorrido de varios ejemplares del libro “Turismo Un Sueño por la Paz” de Belisario Marín Montes responsable de este programa. (El más económico de cuantos se han diseñado en la historia del turismo colombiano). Hasta agotar existencia\n" +
+                            "\n" +
+                            "7. Visita a la Basílica del Señor de los Milagros de Buga\n" +
+                            "\n" +
+                            "8. Cóctel de bienvenida en los hoteles de Cali, Buga y Quindío\n" +
+                            "\n" +
+                            "9. Refrigerio en la ciudad de Buga"),
+            Paquetes("Silvia Cauca",
+                    "190000",
+                    "https://media-cdn.tripadvisor.com/media/photo-s/0f/10/39/7b/silvia-cauca-pueblo-de.jpg",
+                    "1. Transporte terrestre Cali – Silvia – Cali\n" +
                     "2. Alojamiento la noche del día uno (sábado – lunes o miércoles) en la Casa Turística de Silvia con base en acomodación Doble – Triple o Cuádruple (2–3 o 4) personas por habitación.\n" +
                     "3. Toda la alimentación (tres comidas diarias) desde el refrigerio de bienvenida hasta el almuerzo del día dos (domingo – martes o jueves) .\n" +
                     "4. Noche musical de integración (si hay hospedados en la casa más de 15 quince personas).\n" +

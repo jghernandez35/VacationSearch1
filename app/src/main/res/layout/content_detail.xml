@@ -39,7 +39,7 @@
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_time" />
+                    app:srcCompat="@drawable/ic_description" />
 
                 <ImageView
                     android:id="@+id/iconDate"
@@ -51,7 +51,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/iconTime"
-                    app:srcCompat="@drawable/ic_today" />
+                    app:srcCompat="@drawable/ic_money" />
 
                 <TextView
                     android:id="@+id/time"
